@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Football League</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="main-nav">
+        <div class="nav-brand" onclick="navigateTo('home')">
+            <span class="trophy">🏆</span> Fantasy Football League
+        </div>
+        <div class="nav-links">
+            <a href="javascript:void(0)" onclick="navigateTo('home')" class="nav-link active" data-page="home">Home</a>
+            <a href="javascript:void(0)" onclick="navigateTo('alltime')" class="nav-link" data-page="alltime">All-Time Stats</a>
+            <div class="nav-dropdown">
+                <a href="javascript:void(0)" class="nav-link" data-page="managers">Managers ▾</a>
+                <div class="dropdown-content" id="manager-dropdown"></div>
+            </div>
+            <a href="javascript:void(0)" onclick="navigateTo('leagueleaders')" class="nav-link" data-page="leagueleaders">League Leaders</a>
+            <a href="javascript:void(0)" onclick="navigateTo('luck')" class="nav-link" data-page="luck">Luck Index</a>
+            <a href="javascript:void(0)" onclick="navigateTo('players')" class="nav-link" data-page="players">Player Usage</a>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="javascript:void(0)" onclick="navigateTo('home')">Home</a>
+        <a href="javascript:void(0)" onclick="navigateTo('alltime')">All-Time Stats</a>
+        <a href="javascript:void(0)" onclick="navigateTo('leagueleaders')">League Leaders</a>
+        <a href="javascript:void(0)" onclick="navigateTo('luck')">Luck Index</a>
+        <a href="javascript:void(0)" onclick="navigateTo('players')">Player Usage</a>
+        <hr>
+        <div id="mobile-manager-links"></div>
+    </div>
+
+    <main id="content">
+        <div class="loading">Loading data...</div>
+    </main>
+
+    <footer>
+        <p>Fantasy Football League &bull; Seasons 2002&ndash;2025</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
